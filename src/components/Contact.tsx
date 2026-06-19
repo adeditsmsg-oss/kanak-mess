@@ -37,20 +37,18 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
-          {/* Contact Details & Info */}
           <div className="lg:col-span-5 space-y-8">
             <div className="bg-white p-8 rounded-[2rem] shadow-xl border border-warmOffWhite space-y-6">
-              <h3 className="text-xl font-bold">Location & Contact</h3>
+              <h3 className="text-xl font-bold text-primaryDark">Location & Contact</h3>
               
               <div className="space-y-4">
                 <a href="tel:+91873083395" className="flex items-start space-x-4 p-3 rounded-xl hover:bg-warmOffWhite transition-colors">
-                  <div className="p-3 bg-tealBrand/10 text-tealBrand rounded-xl">
+                  <div className="p-3 bg-terracotta/10 text-terracotta rounded-xl">
                     <Phone size={20} />
                   </div>
                   <div>
                     <p className="text-xs text-charcoalText/60 leading-none">Call Support</p>
-                    <p className="text-base font-bold text-charcoalText mt-1">+91 87308 3395</p>
+                    <p className="text-base font-bold text-primaryDark mt-1">+91 87308 3395</p>
                   </div>
                 </a>
 
@@ -64,23 +62,29 @@ export default function Contact() {
                   </div>
                 </a>
 
-                <div className="flex items-start space-x-4 p-3 rounded-xl">
-                  <div className="p-3 bg-tealBrand/10 text-tealBrand rounded-xl">
+                <a
+                  href="https://maps.app.goo.gl/LgzWgPbMpWQ7Qwhx9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start space-x-4 p-3 rounded-xl hover:bg-warmOffWhite transition-colors"
+                >
+                  <div className="p-3 bg-terracotta/10 text-terracotta rounded-xl">
                     <MapPin size={20} />
                   </div>
                   <div>
-                    <p className="text-xs text-charcoalText/60 leading-none">Address</p>
-                    <p className="text-base font-bold text-charcoalText mt-1 leading-snug">
+                    <p className="text-xs text-charcoalText/60 leading-none">Address (Tap to Open Map)</p>
+                    <p className="text-base font-bold text-primaryDark mt-1 leading-snug">
                       KANAK MESS CUM PAYING GUEST,<br />
                       Saratpally, Midnapore, West Bengal 721101
                     </p>
+                    <span className="text-xs text-terracotta hover:underline block mt-1">View on Google Maps →</span>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
 
             {/* Embedded Google Map (Stable output=embed parameter) */}
-            <div className="rounded-[2rem] overflow-hidden shadow-lg border border-greyBorder/20 h-[300px]">
+            <div className="rounded-[2rem] overflow-hidden shadow-lg border border-greyBorder/20 h-[300px] relative group">
               <iframe
                 title="Kanak Mess Cum Paying Guest Location Map"
                 src="https://maps.google.com/maps?q=KANAK%20MESS%20CUM%20PAYING%20GUEST,%20Saratpally,%20Midnapore&t=&z=15&ie=UTF8&iwloc=&output=embed"
@@ -91,6 +95,15 @@ export default function Contact() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
+              <a
+                href="https://maps.app.goo.gl/LgzWgPbMpWQ7Qwhx9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-4 right-4 bg-terracotta text-white font-bold px-4 py-2 rounded-xl text-xs hover:bg-primaryDark transition-all duration-300 shadow-lg flex items-center space-x-2"
+              >
+                <MapPin size={12} />
+                <span>Open in Google Maps</span>
+              </a>
             </div>
           </div>
 
@@ -102,14 +115,14 @@ export default function Contact() {
                 <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto animate-bounce">
                   <CheckCircle size={36} />
                 </div>
-                <h3 className="text-2xl font-bold text-charcoalText font-bengali">ধন্যবাদ! আমরা পেয়ে গেছি</h3>
+                <h3 className="text-2xl font-bold text-primaryDark font-bengali">ধন্যবাদ! আমরা পেয়ে গেছি</h3>
                 <p className="text-charcoalText/70 font-bengali max-w-sm mx-auto">
                   Your enquiry has been submitted. Our property manager will call you shortly.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6 text-left">
-                <h3 className="text-2xl font-bold text-charcoalText">Room Enquiry Form</h3>
+                <h3 className="text-2xl font-bold text-primaryDark">Room Enquiry Form</h3>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
@@ -120,7 +133,7 @@ export default function Contact() {
                       placeholder="e.g. Rahul Paul"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 bg-warmOffWhite border border-greyBorder/20 rounded-xl text-charcoalText focus:border-tealBrand focus:ring-1 focus:ring-tealBrand outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-warmOffWhite border border-greyBorder/20 rounded-xl text-charcoalText focus:border-terracotta focus:ring-1 focus:ring-terracotta outline-none transition-colors"
                     />
                   </div>
                   <div>
@@ -131,7 +144,7 @@ export default function Contact() {
                       placeholder="e.g. 9876543210"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 bg-warmOffWhite border border-greyBorder/20 rounded-xl text-charcoalText focus:border-tealBrand focus:ring-1 focus:ring-tealBrand outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-warmOffWhite border border-greyBorder/20 rounded-xl text-charcoalText focus:border-terracotta focus:ring-1 focus:ring-terracotta outline-none transition-colors"
                     />
                   </div>
                 </div>
@@ -141,7 +154,7 @@ export default function Contact() {
                   <select
                     value={formData.roomType}
                     onChange={(e) => setFormData({ ...formData, roomType: e.target.value })}
-                    className="w-full px-4 py-3 bg-warmOffWhite border border-greyBorder/20 rounded-xl text-charcoalText focus:border-tealBrand focus:ring-1 focus:ring-tealBrand outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-warmOffWhite border border-greyBorder/20 rounded-xl text-charcoalText focus:border-terracotta focus:ring-1 focus:ring-terracotta outline-none transition-colors"
                   >
                     <option value="single">Single Room</option>
                     <option value="double">Double Sharing</option>
@@ -156,13 +169,13 @@ export default function Contact() {
                     placeholder="Let us know when you plan to visit or if you have specific meal/accommodation questions..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 bg-warmOffWhite border border-greyBorder/20 rounded-xl text-charcoalText focus:border-tealBrand focus:ring-1 focus:ring-tealBrand outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-warmOffWhite border border-greyBorder/20 rounded-xl text-charcoalText focus:border-terracotta focus:ring-1 focus:ring-terracotta outline-none transition-colors"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center space-x-2 bg-tealBrand text-white py-4 rounded-xl font-bold hover:bg-goldBrand transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-tealBrand/10"
+                  className="w-full flex items-center justify-center space-x-2 bg-terracotta text-white py-4 rounded-xl font-bold hover:bg-primaryDark transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-terracotta/10"
                 >
                   <Send size={18} />
                   <span>Submit Enquiry</span>
