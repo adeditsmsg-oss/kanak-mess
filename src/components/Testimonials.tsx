@@ -82,11 +82,11 @@ export default function Testimonials() {
             {/* Author info */}
             <div className="mt-8 pt-6 border-t border-greyBorder/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 rounded-full bg-tealBrand/10 text-tealBrand flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-terracotta/10 text-terracotta flex items-center justify-center">
                   <UserCheck size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-charcoalText text-base">{reviews[currentIndex].name}</h4>
+                  <h4 className="font-bold text-primaryDark text-base">{reviews[currentIndex].name}</h4>
                   <p className="text-xs text-charcoalText/60 font-medium">{reviews[currentIndex].role}</p>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function Testimonials() {
             </div>
 
             {/* Floating decorative elements */}
-            <div className="absolute bottom-6 right-8 text-tealBrand/5 text-9xl font-serif pointer-events-none select-none">
+            <div className="absolute bottom-6 right-8 text-terracotta/5 text-9xl font-serif pointer-events-none select-none">
               ”
             </div>
           </div>
@@ -106,14 +106,14 @@ export default function Testimonials() {
           <div className="flex justify-center space-x-4 mt-8">
             <button
               onClick={prevSlide}
-              className="p-3 bg-white border border-greyBorder/30 hover:border-tealBrand hover:text-tealBrand rounded-full text-charcoalText transition-colors shadow-sm"
+              className="p-3 bg-white border border-greyBorder/30 hover:border-terracotta hover:text-terracotta rounded-full text-charcoalText transition-colors shadow-sm"
               aria-label="Previous Testimonial"
             >
               <ArrowLeft size={20} />
             </button>
             <button
               onClick={nextSlide}
-              className="p-3 bg-white border border-greyBorder/30 hover:border-tealBrand hover:text-tealBrand rounded-full text-charcoalText transition-colors shadow-sm"
+              className="p-3 bg-white border border-greyBorder/30 hover:border-terracotta hover:text-terracotta rounded-full text-charcoalText transition-colors shadow-sm"
               aria-label="Next Testimonial"
             >
               <ArrowRight size={20} />
