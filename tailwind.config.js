@@ -7,9 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        tealBrand: '#0E7490',
-        goldBrand: '#D97706',
-        sandBg: '#FAF7F2',
+        primaryDark: '#0A0F24', // Deep Midnight Blue
+        goldAccent: '#C5A880',  // Warm Champagne Gold
+        goldBrand: '#D97706',   // Shimmering Golden Amber
+        terracotta: '#C2410C',  // Elegant Terracotta Red-Orange
+        sandBg: '#FCFAF7',      // Warm Alabaster/Cream background
         charcoalText: '#1E293B',
         creamBg: '#FFFDF9',
         greyBorder: '#E2E8F0',
