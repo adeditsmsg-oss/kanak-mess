@@ -13,23 +13,23 @@
 
 /* Custom Alpana grids and details */
 .alpana-pattern {
-  background-image: radial-gradient(circle at 1px 1px, rgba(14, 116, 144, 0.05) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, rgba(194, 65, 12, 0.05) 1px, transparent 0);
   background-size: 24px 24px;
 }
 
 /* Premium Card & Glass styles */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .glass-panel-dark {
-  background: rgba(14, 116, 144, 0.95);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(10, 15, 36, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Custom transitions and scrollbar */
@@ -37,12 +37,12 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF7F2;
+  background: #FCFAF7;
 }
 ::-webkit-scrollbar-thumb {
-  background: #0E7490;
+  background: #C2410C;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0A5164;
+  background: #A03208;
 }
