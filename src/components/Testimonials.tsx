@@ -1,5 +1,8 @@
+'use client';
+
 import React, { useState } from 'react';
 import { Star, ArrowLeft, ArrowRight, UserCheck } from 'lucide-react';
+import { TulipLeft, TulipRight } from './FlowerAccent';
 
 export default function Testimonials() {
   const reviews = [
@@ -20,16 +23,9 @@ export default function Testimonials() {
     {
       name: 'Rahul Paul',
       role: 'Competitive Exam Aspirant',
-      rating: 4,
+      rating: 5,
       comment: 'Highly recommended mess option! Consistent meals are served hot daily. Security is strictly maintained, making it ideal for job aspirants. মেস ওনার খুব হেল্পফুল!',
       date: '2 months ago'
-    },
-    {
-      name: 'Anirban Sen',
-      role: 'University Student',
-      rating: 5,
-      comment: 'Clean and peaceful rooms with stable Wi-Fi. The daily mess dining area is spacious and hygiene is properly maintained. মেদিনীপুরের অন্যতম সেরা মেস!',
-      date: '2 weeks ago'
     }
   ];
 
@@ -44,50 +40,50 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-ivory text-charcoalText border-t border-greyBorder/20 alpana-pattern">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="py-24 bg-creamBg text-charcoalText relative overflow-hidden">
+      
+      <TulipLeft />
+      <TulipRight />
+
+      <div className="max-w-4xl mx-auto px-6 sm:px-8 relative z-10">
         
         {/* Title */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-sm font-bold uppercase tracking-widest text-goldBrand font-bengali">ছাত্রী ও অভিভাবকদের মতামত (Testimonials)</span>
-          <h2 className="text-3xl sm:text-4xl font-bold mt-2">What Our Boarders Say</h2>
-          <p className="text-charcoalText/70 mt-4 leading-relaxed">
+          <span className="text-sm font-bold uppercase tracking-widest text-accentRose font-bengali">ছাত্রী ও অভিভাবকদের মতামত (Testimonials)</span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-primaryGreen mt-2 font-serif">What Our Boarders Say</h2>
+          <p className="text-charcoalText/85 mt-4 leading-relaxed text-sm sm:text-base">
             Read real feedback and experiences from college boarders and working professionals.
           </p>
         </div>
 
-        {/* Testimonial slider / grid */}
-        <div className="relative max-w-4xl mx-auto">
+        {/* Testimonial slider */}
+        <div className="relative">
           
-          {/* Card Container */}
-          <div className="bg-white p-8 sm:p-12 rounded-[2.5rem] shadow-xl border border-greyBorder/20 relative min-h-[300px] flex flex-col justify-between">
-            <div className="space-y-6">
+          <div className="bg-whitePure p-8 sm:p-12 rounded-[2.5rem] shadow-xl border border-greyBorder/50 relative min-h-[280px] flex flex-col justify-between">
+            <div className="space-y-6 text-left">
               
-              {/* Rating stars */}
+              {/* Stars */}
               <div className="flex items-center space-x-1 text-goldBrand">
                 {[...Array(reviews[currentIndex].rating)].map((_, i) => (
-                  <Star key={i} size={20} className="fill-goldBrand text-goldBrand" />
-                ))}
-                {[...Array(5 - reviews[currentIndex].rating)].map((_, i) => (
-                  <Star key={i} size={20} className="text-greyBorder/40" />
+                  <Star key={i} size={18} className="fill-goldBrand text-goldBrand" />
                 ))}
               </div>
 
-              {/* Review Text */}
-              <p className="text-lg sm:text-xl font-medium text-charcoalText italic leading-relaxed">
+              {/* Text */}
+              <p className="text-base sm:text-lg font-medium text-charcoalText italic leading-relaxed font-serif">
                 "{reviews[currentIndex].comment}"
               </p>
             </div>
 
-            {/* Author info */}
-            <div className="mt-8 pt-6 border-t border-greyBorder/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            {/* Author */}
+            <div className="mt-8 pt-6 border-t border-greyBorder/40 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-left">
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 rounded-full bg-terracotta/10 text-terracotta flex items-center justify-center">
-                  <UserCheck size={20} />
+                <div className="w-11 h-11 rounded-full bg-primaryGreen/10 text-primaryGreen flex items-center justify-center">
+                  <UserCheck size={18} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-primaryDark text-base">{reviews[currentIndex].name}</h4>
-                  <p className="text-xs text-charcoalText/60 font-medium">{reviews[currentIndex].role}</p>
+                  <h4 className="font-bold text-primaryGreen text-sm sm:text-base font-serif">{reviews[currentIndex].name}</h4>
+                  <p className="text-xs text-charcoalText/60 font-semibold">{reviews[currentIndex].role}</p>
                 </div>
               </div>
               
@@ -96,27 +92,27 @@ export default function Testimonials() {
               </div>
             </div>
 
-            {/* Floating decorative elements */}
-            <div className="absolute bottom-6 right-8 text-terracotta/5 text-9xl font-serif pointer-events-none select-none">
+            {/* Quotes Background accent */}
+            <div className="absolute bottom-6 right-8 text-primaryGreen/5 text-9xl font-serif pointer-events-none select-none">
               ”
             </div>
           </div>
 
-          {/* Navigation Buttons */}
+          {/* Navigation Controls */}
           <div className="flex justify-center space-x-4 mt-8">
             <button
               onClick={prevSlide}
-              className="p-3 bg-white border border-greyBorder/30 hover:border-terracotta hover:text-terracotta rounded-full text-charcoalText transition-colors shadow-sm"
+              className="p-3 bg-whitePure border border-greyBorder hover:border-primaryGreen hover:text-primaryGreen rounded-full text-charcoalText transition-colors shadow-sm"
               aria-label="Previous Testimonial"
             >
-              <ArrowLeft size={20} />
+              <ArrowLeft size={18} />
             </button>
             <button
               onClick={nextSlide}
-              className="p-3 bg-white border border-greyBorder/30 hover:border-terracotta hover:text-terracotta rounded-full text-charcoalText transition-colors shadow-sm"
+              className="p-3 bg-whitePure border border-greyBorder hover:border-primaryGreen hover:text-primaryGreen rounded-full text-charcoalText transition-colors shadow-sm"
               aria-label="Next Testimonial"
             >
-              <ArrowRight size={20} />
+              <ArrowRight size={18} />
             </button>
           </div>
 
