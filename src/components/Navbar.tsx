@@ -32,11 +32,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-full bg-tealBrand flex items-center justify-center text-white">
+            <div className="w-10 h-10 rounded-full bg-terracotta flex items-center justify-center text-white">
               <Landmark size={20} />
             </div>
             <div>
-              <span className="font-bengali text-xl font-bold text-tealBrand block leading-none">কনক মেস কাম পেয়িং গেস্ট</span>
+              <span className="font-bengali text-xl font-bold text-primaryDark block leading-none">কনক মেস কাম পেয়িং গেস্ট</span>
               <span className="text-[10px] text-goldBrand font-semibold uppercase tracking-wider">Kanak Mess & PG</span>
             </div>
           </a>
@@ -47,14 +47,14 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-charcoalText hover:text-tealBrand transition-colors duration-200"
+                className="text-sm font-medium text-charcoalText hover:text-terracotta transition-colors duration-200"
               >
                 {link.name}
               </a>
             ))}
             <a
               href="tel:+91873083395"
-              className="flex items-center space-x-2 bg-tealBrand text-white px-4 py-2 rounded-full font-medium hover:bg-goldBrand transition-all duration-300 transform hover:scale-105 shadow-md shadow-tealBrand/10"
+              className="flex items-center space-x-2 bg-terracotta text-white px-4 py-2 rounded-full font-medium hover:bg-goldBrand transition-all duration-300 transform hover:scale-105 shadow-md shadow-terracotta/10"
             >
               <Phone size={16} />
               <span>Call Now</span>
@@ -65,7 +65,7 @@ export default function Navbar() {
           <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-charcoalText hover:text-tealBrand focus:outline-none"
+              className="text-charcoalText hover:text-terracotta focus:outline-none"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -82,14 +82,14 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 rounded-md text-base font-medium text-charcoalText hover:bg-sandBg hover:text-tealBrand transition-colors"
+                className="block px-3 py-2 rounded-md text-base font-medium text-charcoalText hover:bg-sandBg hover:text-terracotta transition-colors"
               >
                 {link.name}
               </a>
             ))}
             <a
               href="tel:+91873083395"
-              className="flex items-center justify-center space-x-2 bg-tealBrand text-white mx-3 my-4 py-3 rounded-full font-medium hover:bg-goldBrand transition-colors shadow-md"
+              className="flex items-center justify-center space-x-2 bg-terracotta text-white mx-3 my-4 py-3 rounded-full font-medium hover:bg-goldBrand transition-colors shadow-md"
             >
               <Phone size={18} />
               <span>Call Now</span>
