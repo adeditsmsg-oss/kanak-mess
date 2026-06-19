@@ -53,10 +53,10 @@ export default function FAQ() {
             >
               <button
                 onClick={() => toggleFAQ(idx)}
-                className="w-full text-left p-6 flex justify-between items-center text-charcoalText hover:text-tealBrand transition-colors font-semibold"
+                className="w-full text-left p-6 flex justify-between items-center text-primaryDark hover:text-terracotta transition-colors font-semibold"
               >
                 <span className="text-base sm:text-lg">{faq.q}</span>
-                <span className="ml-4 p-1.5 bg-warmOffWhite text-tealBrand rounded-lg flex-shrink-0">
+                <span className="ml-4 p-1.5 bg-warmOffWhite text-terracotta rounded-lg flex-shrink-0">
                   {openIndex === idx ? <Minus size={18} /> : <Plus size={18} />}
                 </span>
               </button>
