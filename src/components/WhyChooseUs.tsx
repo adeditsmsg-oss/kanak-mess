@@ -48,13 +48,13 @@ export default function WhyChooseUs() {
             {points.map((point, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-2xl border border-greyBorder/20 hover:border-tealBrand transition-all duration-300 shadow-sm flex items-start space-x-4"
+                className="bg-white p-6 rounded-2xl border border-greyBorder/20 hover:border-terracotta transition-all duration-300 shadow-sm flex items-start space-x-4"
               >
-                <div className="p-3 bg-tealBrand/10 text-tealBrand rounded-xl">
+                <div className="p-3 bg-terracotta/10 text-terracotta rounded-xl">
                   <point.icon size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-charcoalText text-lg">{point.title}</h4>
+                  <h4 className="font-bold text-primaryDark text-lg">{point.title}</h4>
                   <p className="text-sm text-charcoalText/70 mt-1 leading-relaxed">{point.description}</p>
                 </div>
               </div>
@@ -62,7 +62,7 @@ export default function WhyChooseUs() {
           </div>
 
           {/* Right Side Callout Card */}
-          <div className="lg:col-span-5 bg-tealBrand text-white p-8 rounded-[2rem] shadow-2xl relative overflow-hidden">
+          <div className="lg:col-span-5 bg-terracotta text-white p-8 rounded-[2rem] shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-goldBrand/20 rounded-full blur-2xl pointer-events-none" />
             
             <h3 className="text-2xl font-bold leading-tight font-bengali">
