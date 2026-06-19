@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 
@@ -32,15 +34,15 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-20 bg-warmOffWhite border-t border-greyBorder/20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-24 bg-creamCard border-t border-greyBorder/30 relative overflow-hidden">
+      <div className="max-w-4xl mx-auto px-6 sm:px-8">
         
         {/* Title */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-sm font-bold uppercase tracking-widest text-goldBrand font-bengali">জিজ্ঞাসাবাদ (FAQ)</span>
-          <h2 className="text-3xl sm:text-4xl font-bold mt-2 text-charcoalText">Frequently Asked Questions</h2>
-          <p className="text-charcoalText/70 mt-4 leading-relaxed">
-            Find details regarding the daily mess menu, security deposits, curator rules, and guest policies.
+          <span className="text-sm font-bold uppercase tracking-widest text-accentRose font-bengali">জিজ্ঞাসাবাদ (FAQ)</span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-primaryGreen mt-2 font-serif">Frequently Asked Questions</h2>
+          <p className="text-charcoalText/80 mt-4 leading-relaxed text-sm sm:text-base">
+            Find details regarding the daily mess menu, security deposits, curfew rules, and guest policies.
           </p>
         </div>
 
@@ -49,24 +51,24 @@ export default function FAQ() {
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl border border-greyBorder/20 overflow-hidden transition-all duration-300 shadow-sm"
+              className="bg-whitePure rounded-3xl border border-greyBorder/50 overflow-hidden transition-all duration-300 shadow-sm"
             >
               <button
                 onClick={() => toggleFAQ(idx)}
-                className="w-full text-left p-6 flex justify-between items-center text-primaryDark hover:text-terracotta transition-colors font-semibold"
+                className="w-full text-left p-6 flex justify-between items-center text-primaryGreen hover:text-accentRose transition-colors font-bold font-serif"
               >
-                <span className="text-base sm:text-lg">{faq.q}</span>
-                <span className="ml-4 p-1.5 bg-warmOffWhite text-terracotta rounded-lg flex-shrink-0">
-                  {openIndex === idx ? <Minus size={18} /> : <Plus size={18} />}
+                <span className="text-sm sm:text-base">{faq.q}</span>
+                <span className="ml-4 p-1.5 bg-creamBg text-primaryGreen rounded-lg flex-shrink-0">
+                  {openIndex === idx ? <Minus size={16} /> : <Plus size={16} />}
                 </span>
               </button>
               
               <div
                 className={`transition-all duration-300 ease-in-out ${
-                  openIndex === idx ? 'max-h-[500px] border-t border-greyBorder/10 p-6' : 'max-h-0 pointer-events-none'
-                } overflow-hidden bg-sandBg/40`}
+                  openIndex === idx ? 'max-h-[500px] border-t border-greyBorder/20 p-6' : 'max-h-0 pointer-events-none'
+                } overflow-hidden bg-creamBg/30`}
               >
-                <p className="text-sm text-charcoalText/85 leading-relaxed">
+                <p className="text-xs sm:text-sm text-charcoalText/90 leading-relaxed text-left">
                   {faq.a}
                 </p>
               </div>
