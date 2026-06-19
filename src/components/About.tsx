@@ -33,7 +33,7 @@ export default function About() {
                   src={`${import.meta.env.BASE_URL}images/dining.jpg`}
                   alt="Kanak Mess Dining Room"
                 />
-                <div className="bg-tealBrand p-6 rounded-2xl text-white shadow-lg text-center transform hover:scale-[1.02] transition-transform duration-300">
+                <div className="bg-terracotta p-6 rounded-2xl text-white shadow-lg text-center transform hover:scale-[1.02] transition-transform duration-300">
                   <span className="text-3xl font-extrabold block">4.6 ★</span>
                   <span className="text-xs uppercase tracking-wider font-semibold font-bengali">অসাধারণ রিভিউ (4.6 Rating)</span>
                 </div>
@@ -56,7 +56,7 @@ export default function About() {
           <div className="space-y-8">
             <div>
               <span className="text-sm font-bold uppercase tracking-widest text-goldBrand font-bengali">আমাদের সম্পর্কে (About Us)</span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-charcoalText mt-2 leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-bold text-primaryDark mt-2 leading-tight">
                 Premium Stay & Dining in Saratpally, Midnapore
               </h2>
               <p className="text-charcoalText/80 mt-4 leading-relaxed">
@@ -67,11 +67,11 @@ export default function About() {
             <div className="space-y-4">
               {highlights.map((item, idx) => (
                 <div key={idx} className="flex items-start space-x-4 p-4 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300">
-                  <div className="p-3 bg-tealBrand/10 text-tealBrand rounded-xl">
+                  <div className="p-3 bg-terracotta/10 text-terracotta rounded-xl">
                     <item.icon size={22} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-charcoalText">{item.title}</h3>
+                    <h3 className="font-bold text-primaryDark">{item.title}</h3>
                     <p className="text-sm text-charcoalText/70 mt-1">{item.description}</p>
                   </div>
                 </div>
