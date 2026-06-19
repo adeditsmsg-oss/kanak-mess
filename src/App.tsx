@@ -51,14 +51,14 @@ function App() {
       <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden glass-panel py-3 px-4 shadow-2xl border-t border-greyBorder/20 flex gap-4">
         <a
           href="tel:+91873083395"
-          className="flex-1 flex items-center justify-center space-x-2 bg-charcoalText text-white py-3 rounded-xl font-bold text-sm hover:bg-tealBrand transition-colors"
+          className="flex-1 flex items-center justify-center space-x-2 bg-primaryDark text-white py-3 rounded-xl font-bold text-sm hover:bg-terracotta transition-colors"
         >
           <Phone size={16} />
           <span>Call Support</span>
         </a>
         <a
           href="#contact"
-          className="flex-1 flex items-center justify-center bg-tealBrand text-white py-3 rounded-xl font-bold text-sm hover:bg-goldBrand transition-colors"
+          className="flex-1 flex items-center justify-center bg-terracotta text-white py-3 rounded-xl font-bold text-sm hover:bg-goldBrand transition-colors"
         >
           <span>Book Now</span>
         </a>
