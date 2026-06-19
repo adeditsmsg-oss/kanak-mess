@@ -65,7 +65,7 @@ export default function Gallery() {
               onClick={() => setFilter(cat)}
               className={`px-5 py-2 rounded-full text-xs font-bold uppercase transition-all duration-300 ${
                 filter === cat
-                  ? 'bg-tealBrand text-white shadow-md'
+                  ? 'bg-terracotta text-white shadow-md'
                   : 'bg-white text-charcoalText hover:bg-white/80 border border-greyBorder/30'
               }`}
             >
