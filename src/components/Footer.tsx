@@ -3,13 +3,13 @@ import { Phone, MapPin, MessageSquare, Heart } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoalText text-white pt-16 pb-8 border-t border-tealBrand/20">
+    <footer className="bg-primaryDark text-white pt-16 pb-8 border-t border-terracotta/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-12 text-left">
         
         {/* Branding & Description */}
         <div className="md:col-span-5 space-y-4">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-full bg-tealBrand flex items-center justify-center text-white text-sm font-bold">
+            <div className="w-8 h-8 rounded-full bg-terracotta flex items-center justify-center text-white text-sm font-bold">
               K
             </div>
             <div>
