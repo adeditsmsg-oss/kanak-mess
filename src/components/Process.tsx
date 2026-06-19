@@ -40,20 +40,20 @@ export default function Process() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
           
           {/* Connector line for large screens */}
-          <div className="hidden md:block absolute top-1/2 left-[15%] right-[15%] h-0.5 bg-tealBrand/10 -translate-y-1/2 pointer-events-none" />
+          <div className="hidden md:block absolute top-1/2 left-[15%] right-[15%] h-0.5 bg-terracotta/10 -translate-y-1/2 pointer-events-none" />
 
           {steps.map((step, idx) => (
             <div
               key={idx}
-              className="bg-white p-8 rounded-2xl border border-greyBorder/20 relative z-10 hover:border-tealBrand transition-all duration-300 text-center space-y-4 hover:shadow-lg"
+              className="bg-white p-8 rounded-2xl border border-greyBorder/20 relative z-10 hover:border-terracotta transition-all duration-300 text-center space-y-4 hover:shadow-lg"
             >
-              <div className="absolute top-4 right-4 text-tealBrand/20 text-3xl font-extrabold font-bengali">
+              <div className="absolute top-4 right-4 text-terracotta/20 text-3xl font-extrabold font-bengali">
                 {step.step}
               </div>
-              <div className="w-16 h-16 rounded-2xl bg-tealBrand/10 text-tealBrand flex items-center justify-center mx-auto">
+              <div className="w-16 h-16 rounded-2xl bg-terracotta/10 text-terracotta flex items-center justify-center mx-auto">
                 <step.icon size={28} />
               </div>
-              <h3 className="font-bold text-lg text-charcoalText">{step.title}</h3>
+              <h3 className="font-bold text-lg text-primaryDark">{step.title}</h3>
               <p className="text-sm text-charcoalText/70 leading-relaxed">{step.description}</p>
             </div>
           ))}
